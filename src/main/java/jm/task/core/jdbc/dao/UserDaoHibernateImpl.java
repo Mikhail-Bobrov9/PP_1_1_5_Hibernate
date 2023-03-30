@@ -15,7 +15,7 @@ import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
     Transaction transaction;
-    User user;
+    private User user;
     private  static final SessionFactory sessionFactory = Util.getSessionFactory();
     public UserDaoHibernateImpl() {
     }
@@ -103,7 +103,7 @@ public class UserDaoHibernateImpl implements UserDao {
             Query query = session.createQuery(cleanUsersTable);
             query.executeUpdate();
             transaction.commit();
-            System.out.println("Таблица удален");
+            System.out.println("Таблица удалена");
         }  catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();

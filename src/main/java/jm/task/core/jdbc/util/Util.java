@@ -20,17 +20,17 @@ public class Util {
     private static final  String USERNAME = "root1";
     private static final  String PASSWORD = "root";
 
-//    public static Connection getConnection()  {
-//        Connection connection = null;
-//        try {
-//            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-//            System.out.println("Connection OK");
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//            System.out.println("Connection ERROR");
-//        }
-//        return connection;
-//    }
+    public static Connection getConnection()  {
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            System.out.println("Connection OK");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Connection ERROR");
+        }
+        return connection;
+    }
 
     //подключение через Hybernate
     private static SessionFactory sessionFactory;
